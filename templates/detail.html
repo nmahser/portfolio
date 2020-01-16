@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <title>Portfolio</title>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Custom styles for this template -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+  </head>
+
+  <body>
+    <section class="jumbotron text-center">
+      <div class="container">
+        <div class="section-title">
+          <h1>Project Details</h1>
+        </div>
+
+        <div class="project-summary">
+          <p>{{job.summary}}</p>
+        </div>
+
+        <div class="section-title">
+          <h3>Tools Used</h3>
+          <p id="project-tool">{{job.tools}}</p>
+          <div class="project-icon">
+            <img src="{{ job.icon.url }}" alt="" />
+          </div>
+
+          <div class="project-gif">
+            <img src="{{ job.gif.url }}" alt="project's gif" />
+            <div class="githublink">
+              <a
+                href="{{ job.github }}"
+                target="_blank"
+                class="effect githublink"
+              >
+                <i class="fa fa-github fa-3x"> </i> GitHub</a
+              >
+            </div>
+            <div>
+              <button
+                type="button"
+                class="backButton"
+                onclick="window.history.back()"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+
+          <!--<a href="https://www.github.com"
+            >GitHub | We can add github icon and project name</a
+          >-->
+        </div>
+      </div>
+    </section>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- use window history back instead
+    <script>
+      //to go back to portfolio section
+      function goBackPortfolio() {
+        location.replace("127.0.0.1:8000/#work");
+      }
+    </script>-->
+  </body>
+</html>
