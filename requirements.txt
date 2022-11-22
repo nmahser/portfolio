@@ -43,7 +43,7 @@ more-itertools==8.0.2
 netaddr==0.7.19
 packaging==20.0
 pathspec==0.5.9
-Pillow==6.2.1
+Pillow==9.3.0
 pluggy==0.13.1
 psycopg2==2.8.4
 psycopg2-binary==2.8.4
